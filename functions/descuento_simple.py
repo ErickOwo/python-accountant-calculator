@@ -21,7 +21,7 @@ def calcular_descuento_simple(father_frame, delete_frames, back_to_last_frame, m
   response_label.config(foreground="green")
   
   def calcular():
-    Db = int(s.get()) * (int(d.get()) / 100) * int(t.get())
+    Db = float(s.get()) * (float(d.get()) / 100) * float(t.get())
     response_var.set(f"El Descuento Simple es de: Q. {Db}")
   
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
@@ -48,7 +48,7 @@ def calcular_valor_vencimiento(father_frame, delete_frames, back_to_last_frame, 
   response_label.config(foreground="green")
   
   def calcular():
-    s = int(Db.get()) / ((int(d.get()) / 100) * int(t.get()))
+    s = float(Db.get()) / ((float(d.get()) / 100) * float(t.get()))
     response_var.set(f"El Valor de Vencimiento es de: Q. {s}")
     
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
@@ -78,7 +78,7 @@ def calcular_tasa_descuento(father_frame, delete_frames, back_to_last_frame, mai
   
   
   def calcular():
-    d = (int(Db.get()) / int(s.get())) * 100 / int(t.get())
+    d = (float(Db.get()) / float(s.get())) * 100 / float(t.get())
     response_var.set(f"La Tasa de Descuento es de: {d}%")
   
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
@@ -107,7 +107,7 @@ def calcular_tiempo_descuento(father_frame, delete_frames, back_to_last_frame, m
   response_label.config(foreground="green")
   
   def calcular():
-    t = int(Db.get()) / ((int(s.get()) * (int(d.get()) / 100)))
+    t = float(Db.get()) / ((float(s.get()) * (float(d.get()) / 100)))
     response_var.set(f"El Tiempo de Descuento es de: {t} años")
   
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
@@ -126,3 +126,4 @@ def descuento_simple(father_frame, delete_frames, main_menu):
   button3 = ttk.Button(father_frame, text="Calcular Tasa de descuento", command=lambda:calcular_tasa_descuento(father_frame, delete_frames, descuento_simple, main_menu)).grid(row=3, column=0, padx=100, ipady=(3), pady=(0, 10))
   
   button4 = ttk.Button(father_frame, text="Calcular Tiempo de descuento", command=lambda:calcular_tiempo_descuento(father_frame, delete_frames, descuento_simple, main_menu)).grid(row=4, column=0, padx=100, ipady=(3), pady=(0, 10))
+  ttk.Button(father_frame, text="Regresar al Menu Principal", command=lambda:main_menu()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10))

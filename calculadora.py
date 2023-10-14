@@ -1,5 +1,6 @@
 from functions.interes_simple import interes_simple
 from functions.descuento_simple import descuento_simple
+from functions.anualidades_vencidas import anualidades_vencidas
 from tkinter import * 
 from tkinter import ttk
 
@@ -21,6 +22,10 @@ def main_menu():
   ttk.my_button = Button(my_frame, text="Interés Simple", command=lambda:interes_simple(my_frame, deleteFrames, main_menu)).grid(row=1, column=0, padx=100, ipady=(3), pady=(0, 10))   
   
   ttk.second_button = Button(my_frame, text="Descuento Simple", command=lambda:descuento_simple(my_frame, deleteFrames, main_menu)).grid(row=2, column=0, padx=100, ipady=(3), pady=(0, 10))
+  
+  ttk.tird_button = Button(my_frame, text="Anualidades Vencidas", command=lambda:anualidades_vencidas(my_frame, deleteFrames, main_menu)).grid(row=3, column=0, padx=100, ipady=(3), pady=(0, 10))
+  
+  ttk.exit_button = Button(my_frame, text="Salir", command=root.quit).grid(row=4, column=0, padx=100, ipadx=(5), ipady=(3), pady=(10))
 
 main_menu()
 

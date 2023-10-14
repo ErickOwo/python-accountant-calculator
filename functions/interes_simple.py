@@ -21,7 +21,7 @@ def calcular_interes(father_frame, delete_frames, back_to_last_frame, main_menu)
   text_response.config(foreground="green")
   
   def calcular():
-    I = int(P.get()) * (int(r.get()) / 100) * int(t.get())
+    I = float(P.get()) * (float(r.get()) / 100) * float(t.get())
     label_var.set(f"El Interes es de: Q. {I}")
     
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
@@ -51,7 +51,7 @@ def calcular_capital(father_frame, delete_frames, back_to_last_frame, main_menu)
   response_label.config(foreground="green")
   
   def calcular():
-    P = int(I.get()) / ((int(r.get())/100) * int(t.get()))  
+    P = float(I.get()) / ((float(r.get())/100) * float(t.get()))  
     response_var.set(f"El Capital es de: Q. {P}")
     
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
@@ -79,7 +79,7 @@ def calcular_tasainteres(father_frame, delete_frames, back_to_last_frame, main_m
   response_label.config(foreground="green")
   
   def calcular():
-    r = int(I.get()) / (int(P.get()) * int(t.get())) * 100
+    r = float(I.get()) / (float(P.get()) * float(t.get())) * 100
     response_var.set(f"La Tasa de Interés Anual es de: % {r}")
   
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
@@ -109,7 +109,7 @@ def calcular_tiempo(father_frame, delete_frames, back_to_last_frame, main_menu):
   response_label.config(foreground="green")
   
   def calcular():
-    t = int(I.get()) / (int(P.get()) * (int(r.get()) / 100))
+    t = float(I.get()) / (float(P.get()) * (float(r.get()) / 100))
     response_var.set(f"El Tiempo transcurrido o a transcurrir es de: {t} años")
     
   button_calculate = ttk.Button(father_frame, text="Calcular", command=lambda:calcular()).grid(row=5, column=0, padx=100, ipady=(3), pady=(0, 10), columnspan=2)
