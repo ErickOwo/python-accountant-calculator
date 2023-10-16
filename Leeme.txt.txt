@@ -1,0 +1,6 @@
+Si el archivo no ejecuta: 
+-ingresar en la carpeta build luego en la carpeta de exe.win y ejecuta el archivo calculadora
+-descargar la herramienta: 
+https://es.dll-files.com/download/1fe47c83669491bf38a949253d7d960f/python311.dll.html?c=TnBWTWVBZGdCbnY2WW9ZZW0zWjlOdz09
+
+:)
